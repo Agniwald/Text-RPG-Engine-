@@ -1,0 +1,550 @@
+{
+	"moves": [
+		{	
+			"_id": 1,
+			"text": "Тебе выпал шанс победить короля демонов!\nСразись с ним и получи славу и благословение от короля.",
+			"no_access_text": null,
+			"finished_text": null,
+			"choices": [
+				{
+					"text": "В путь",
+					"next":  2,
+					"finished": false
+				}
+			],
+			"access": null,
+			"fight": false,
+			"mob": null,
+			"next": null
+		},
+		{	
+			"_id": 2,
+			"text": "Ты сейчас находишься в начальной деревне. Выбери в каком направлении ты пойдешь:",
+			"no_access_text": null,
+			"finished_text": null,
+			"choices": [
+				{
+					"text": "Столица",
+					"next":  5,
+					"finished": false
+				},
+				{
+					"text": "Пустоши",
+					"next":  3,
+					"finished": false
+				},
+				{
+					"text": "Зачарованый лес",
+					"next":  4,
+					"finished": false
+				}
+			],
+			"access": null,
+			"awards": [
+				{
+					"type": "subject",
+					"quantity": null,
+					"award_id": 1
+				}
+			],
+			"fight": false,
+			"mob": null,
+			"next": null
+		},
+		{	
+			"_id": 3,
+			"text": "Вы проходите длинный путь. Так ничего и не нашев идете с небольшим разочарованием обратно...\nОднако, вы натыкаетесь на гоблина!",
+			"no_access_text": null,
+			"finished_text": "Так как вы там уже были, кроме трупа гоблина вы ничего не находите.",
+			"choices": [
+				{
+					"text": "Вернуться в деревню",
+					"next":  2,
+					"finished": true
+				}
+			],
+			"access": null,
+			"fight": true,
+			"mob": "Гоблин",
+			"awards": [
+				{
+					"type": "coins",
+					"quantity": 12,
+					"award_id": null
+				},
+				{
+					"type": "agility",
+					"quantity": 10,
+					"award_id": null
+				}
+			],
+			"next": 2
+		},
+		{	
+			"_id": 4,
+			"text": "Вы блудите по лесу... Пользуясь знанием которое вы получили в столичной библиотеке, вы находите странное логово!",
+			"no_access_text": "Чуть не заблудившись вы ничего не находите.",
+			"finished_text": null,
+			"choices" : [
+				{
+					"text": "Зайти в логово",
+					"next":  20,
+					"finished": false
+				}
+			],
+			"access": {
+				"type": "intelligence",
+				"quantity": 6,
+				"stay": null
+			},
+			"fight": false,
+			"mob": null,
+			"next": null
+		},
+		{	
+			"_id": 5,
+			"text": "Ты не можешь просто так добраться до столицы так как она далеко от тебя. Чтобы доехать до неё тебе нужно минимум 6 монет для аренды повозки.",
+			"no_access_text": null,
+			"finished_text": null,
+			"choices" : [
+				{
+					"text": "Арендовать повозку и отправиться в столицу",
+					"next":  6,
+					"finished": false
+				},
+				{
+					"text": "Вернуться в деревню.",
+					"next":  2,
+					"finished": false
+				}
+			],
+			"access": null,
+			"fight": false,
+			"mob": null,
+			"next": null
+		},
+		{	
+			"_id": 6,
+			"text": "Спустя неделю вы приехали в столицу. После того как вы прошли через городские врата, вам сразу же в глаза бросаються пару инетерсный местечек:",
+			"no_access_text": "Тебе не хватает монет...",
+			"finished_text": "Вы находитесь возле городских врат.",
+			"choices" : [
+				{
+					"text": "Тренировочный лагерь",
+					"next":  7,
+					"finished": false
+				},
+				{
+					"text": "Оружейная мастерская",
+					"next":  12,
+					"finished": false
+				},
+				{
+					"text": "Библиотека",
+					"next":  15,
+					"finished": false
+				},
+				{
+					"text": "Арендовать повозку и отправиться в начальную деревню",
+					"next":  19,
+					"finished": false
+				}
+
+			],
+			"access": {
+				"type": "coins",
+				"quantity": 6,
+				"stay": false
+			},
+			"fight": false,
+			"mob": null,
+			"next": null
+		},
+		{	
+			"_id": 7,
+			"text": "Вы входите на территорию тренировочного лагеря. Вокруг куча деревянных манекенов, но людей можно сосчитать на пальцах одной руки.\nК вам подходит инструктор:\n - Ещё один... решил посмотреть на наш 'туристический' центр? ",
+			"no_access_text": null,
+			"finished_text": "Здесь вас больше не ждут... Можете уходить.",
+			"choices" : [
+				{
+					"text": "Почему тут почти никого нет?",
+					"next":  8,
+					"finished": false
+				},
+				{
+					"text": "Да нет... просто мимо проходил.",
+					"next":  6,
+					"finished": false
+				},
+				{
+					"text": "Вернуться.",
+					"next":  6,
+					"finished": true
+				}
+			],
+			"access": null,
+			"fight": false,
+			"mob": null,
+			"next": null
+		},
+		{	
+			"_id": 8,
+			"text": "Потому что это очень специфический лагерь. Чары наложенные на этот лагерь создателем многим не понятны: только после 10 часов тренировок ловкость и сила повышаються на 1 очко.\nВойти в лагерь можно лишь единожды.",
+			"no_access_text": null,
+			"finished_text": null,
+			"choices" : [
+				{
+					"text": "Тогда... я бы хотел потренироваться здесь некоторое время. (10 часов - 1 монета)",
+					"next":  9,
+					"finished": false
+				},
+				{
+					"text": "Тогда... я бы хотел потренироваться здесь некоторое время. (50 часов - 3 монет)",
+					"next":  10,
+					"finished": false
+				},
+				{
+					"text": "Тогда... я бы хотел потренироваться здесь некоторое время. (100 часов - 5 монет)",
+					"next":  11,
+					"finished": false
+				}
+			],
+			"access": null,
+			"fight": false,
+			"mob": null,
+			"next": null
+		},
+		{	
+			"_id": 9,
+			"text": "Инструктор радостоно проводит вас. Вы начинаете тренироваться.\nПроходит 10 часов...",
+			"no_access_text": "Тебе не хватает монет...",
+			"finished_text": null,
+			"choices" : [
+				{
+					"text": "Вернуться в город.",
+					"next":  6,
+					"finished": false
+				}
+			],
+			"access": {
+				"type": "coins",
+				"quantity": 1,
+				"stay": false
+			},
+			"awards": [
+				{
+					"type": "agility",
+					"quantity": 1,
+					"award_id": null
+				},
+				{
+					"type": "strenght",
+					"quantity": 1,
+					"award_id": null
+				}
+			],
+			"fight": false,
+			"mob": null,
+			"next": null
+		},
+		{	
+			"_id": 10,
+			"text": "Инструктор радостоно проводит вас. Вы начинаете тренироваться.\nПроходит 50 часов...",
+			"no_access_text": "Тебе не хватает монет...",
+			"finished_text": null,
+			"choices" : [
+				{
+					"text": "Вернуться в город.",
+					"next":  6,
+					"finished": false
+				}
+			],
+			"access": {
+				"type": "coins",
+				"quantity": 3,
+				"stay": false
+			},
+			"awards": [
+				{
+					"type": "agility",
+					"quantity": 5,
+					"award_id": null
+				},
+				{
+					"type": "strength",
+					"quantity": 5,
+					"award_id": null
+				}
+			],
+			"fight": false,
+			"mob": null,
+			"next": null
+		},
+		{	
+			"_id": 11,
+			"text": "Инструктор радостоно проводит вас. Вы начинаете тренироваться.\nПроходит 100 часов...",
+			"no_access_text": "Тебе не хватает монет...",
+			"finished_text": null,
+			"choices" : [
+				{
+					"text": "Вернуться в город.",
+					"next":  6,
+					"finished": false
+				}
+			],
+			"access": {
+				"type": "coins",
+				"quantity": 5,
+				"stay": false
+			},
+			"awards": [
+				{
+					"type": "agility",
+					"quantity": 10,
+					"award_id": null
+				},
+				{
+					"type": "strength",
+					"quantity": 10,
+					"award_id": null
+				}
+			],
+			"fight": false,
+			"mob": null,
+			"next": null
+		},
+		{	
+			"_id": 12,
+			"text": "Вы заходите в мастерскую. Перед вашим взором встают два интресных предмета.\nАнигилятор Демонов и Нефритовые Доспехи Небес.\nЗа лавкой стоит старый мужчина. Вы замечаете на его потряпаной одежде старую емблему королевства.\n- Чего желаете?",
+			"no_access_text": null,
+			"finished_text": "Вам здесь больше нечего ловить.",
+			"choices" : [
+				{
+					"text": "Показать Грааль.",
+					"next":  13,
+					"finished": false
+				},
+				{
+					"text": " - Я бы хотел купить у вас кое-что...",
+					"next":  14,
+					"finished": false
+				},
+				{
+					"text": "Вернуться в город.",
+					"next":  6,
+					"finished": false
+				},
+				{
+					"text": "Вернуться в город.",
+					"next":  6,
+					"finished": true
+				}
+			],
+			"access": null,
+			"fight": false,
+			"mob": null,
+			"next": null
+		},
+		{	
+			"_id": 13,
+			"text": "Старик с удивлением смотрит на вас. После небольшего раздумия он обращает свой взор на те оружие и доспехи которые вы приглянули.\n- Кажеться, я знаю что вам надо чтобы выполнить эту важную миссию...",
+			"no_access_text": null,
+			"finished_text": null,
+			"choices" : [
+				{
+					"text": "Вернуться в город.",
+					"next":  6,
+					"finished": false
+				}
+			],
+			"access": null,
+			"awards": [
+				{
+					"type": "weapon",
+					"quantity": null,
+					"award_id": 2
+				},
+				{
+					"type": "armor",
+					"quantity": null,
+					"award_id": 2
+				}
+			],
+			"fight": false,
+			"mob": null,
+			"next": null
+		},
+		{	
+			"_id": 14,
+			"text": "Мы обслуживаем только важных клиентов, по вашему внешнему виду можно сказать только обратное. Проваливайте!",
+			"no_access_text": null,
+			"finished_text": "Вам здесь больше нечего ловить.",
+			"choices" : [
+				{
+					"text": "Вернуться в город.",
+					"next":  6,
+					"finished": false
+				},
+				{
+					"text": "Вернуться в город.",
+					"next":  6,
+					"finished": true
+				}
+			],
+			"access": null,
+			"fight": false,
+			"mob": null,
+			"next": null
+		},
+		{	
+			"_id": 15,
+			"text": "Вы входите в городскую библиотеку. К вам подходит библиотекарь:\n- Вам что-то подсказать?",
+			"no_access_text": null,
+			"finished_text": null,
+			"choices" : [
+				{
+					"text": "- Вы что-то знаете о короле демонов?",
+					"next":  16,
+					"finished": false
+				},
+				{
+					"text": "- Вы что-то знаете о зачарованом лесе?",
+					"next":  17,
+					"finished": false
+				},
+				{
+					"text": "- Вы что-то знаете о зачарованом лесе?",
+					"next":  17,
+					"finished": true
+				},
+				{
+					"text": "Вернуться в город.",
+					"next":  6,
+					"finished": true
+				},
+				{
+					"text": "Вернуться в город.",
+					"next":  6,
+					"finished": false
+				}
+			],
+			"access": null,
+			"fight": false,
+			"mob": null,
+			"next": null
+		},
+		{	
+			"_id": 16,
+			"text": "- К сожалению у нас слишком мало информации об этом персонаже чтобы говорить что-то достоверное.",
+			"no_access_text": null,
+			"finished_text": null,
+			"choices" : [
+				{
+					"text": "- Понятно...",
+					"next":  15,
+					"finished": false
+				}
+			],
+			"access": null,
+			"fight": false,
+			"mob": null,
+			"next": null
+		},
+		{	
+			"_id": 17,
+			"text": "- Возможно у нас что-то да найдется... Вот, пару книг об этой местности.",
+			"no_access_text": null,
+			"finished_text": null,
+			"choices" : [
+				{
+					"text": "- Спасибо...",
+					"next":  18,
+					"finished": false
+				}
+			],
+			"access": null,
+			"fight": false,
+			"mob": null,
+			"next": null
+		},
+		{	
+			"_id": 18,
+			"text": "Вы узнали многое об зачарованом лесе! Теперь вам хватит ума не заблудиться в магических кругах и ловушках.",
+			"no_access_text": null,
+			"finished_text": null,
+			"choices" : [
+				{
+					"text": "Вернуться в город.",
+					"next":  6,
+					"finished": false
+				}
+			],
+			"awards": [
+				{
+					"type": "intelligence",
+					"quantity": 2,
+					"award_id": null
+				}
+			],
+			"access": null,
+			"fight": false,
+			"mob": null,
+			"next": null
+		},
+		{	
+			"_id": 19,
+			"text": "Ты сейчас находишься в начальной деревне. Выбери в каком направлении ты пойдешь:",
+			"no_access_text": null,
+			"finished_text": null,
+			"choices": [
+				{
+					"text": "Столица",
+					"next":  5,
+					"finished": false
+				},
+				{
+					"text": "Пустоши",
+					"next":  3,
+					"finished": false
+				},
+				{
+					"text": "Зачарованый лес",
+					"next":  4,
+					"finished": false
+				}
+			],
+			"access": {
+				"type": "coins",
+				"quantity": 6,
+				"stay": false
+			},
+			"fight": false,
+			"mob": null,
+			"next": null
+		},
+		{	
+			"_id": 3,
+			"text": "Зайдя в страшное логово вы натыкаетесь на Короля Демонов!",
+			"no_access_text": null,
+			"finished_text": null,
+			"choices": [
+				{
+					"text": "Вернуться в деревню",
+					"next":  19,
+					"finished": true
+				}
+			],
+			"access": null,
+			"fight": true,
+			"mob": "Король демонов",
+			"awards": [
+				{
+					"type": "win",
+					"quantity": 1,
+					"award_id": null
+				}
+			],
+			"next": 2
+		}
+	]
+}
